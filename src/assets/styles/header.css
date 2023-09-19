@@ -1,0 +1,31 @@
+header {
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px;
+    background-color: var(--dim-aquamarine);
+    border-radius: 0 0 24px 24px;
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+}
+
+.logo__symbol {
+    display: grid;
+    gap: 4px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.logo__symbol__elem {
+    background-color: var(--dim-blue);
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+}
+
+.logo__symbol__elem.transparent {
+    opacity: 0;
+}

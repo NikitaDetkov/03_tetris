@@ -1,0 +1,16 @@
+:root {
+    --dim-aquamarine: rgb(183, 226, 212);
+    --dim-blue: rgb(71, 71, 197);
+    --deep-blue: rgb(48, 48, 186);
+    
+    --color-I: rgb(41, 172, 41);
+    --color-J: rgb(251, 69, 69);
+    --color-L: rgb(103, 108, 255);
+    --color-O: orange;
+    --color-T: rgb(59, 216, 237);
+    --color-S: rgb(180, 51, 245);
+    --color-Z: rgb(227, 227, 34);
+
+    --dim-dark-blue: rgba(58, 58, 120, 0.5);
+    --dark-blue: rgb(35, 35, 105);
+}

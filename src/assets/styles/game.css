@@ -1,0 +1,275 @@
+.game-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    color: var(--dim-blue);
+}
+
+.active-game.show {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.active-game {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-start-wrapper.hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.game__elem {
+    padding: 16px;
+    border-radius: 10px;
+    background-color: var(--dim-aquamarine);
+    height: max-content;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-info {
+    position: relative;
+}
+
+.game-field {
+    background-color: var(--dark-blue);
+    display: grid;
+    padding: 2px;
+    border-radius: 4px;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.game-field div {
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: var(--dim-dark-blue);
+    border: 2px solid var(--dark-blue);
+}
+
+.game-field div.I {
+    background-color: var(--color-I) !important;
+}
+
+.game-field div.J {
+    background-color: var(--color-J) !important;
+}
+
+.game-field div.L {
+    background-color: var(--color-L) !important;
+}
+
+.game-field div.O {
+    background-color: var(--color-O) !important;
+}
+
+.game-field div.S {
+    background-color: var(--color-S) !important;
+}
+
+.game-field div.Z {
+    background-color: var(--color-Z) !important;
+}
+
+.game-field div.T {
+    background-color: var(--color-T) !important;
+}
+
+.game-field div.ghost {
+    background-color: var(--dim-dark-blue);
+}
+
+.game-field div.sad-face {
+    background-color: rgb(43, 164, 43);
+    transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+.game-field div.hide {
+    animation: hide 0.5s;
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(0.8) rotate(30deg);
+    }
+
+    45% {
+        transform: scale(0.8) rotate(-30deg);
+    }
+
+    90% {
+        transform: scale(1) rotate(0);
+    }
+
+}
+
+.game-field div.I, 
+.game-field div.J,
+.game-field div.L,
+.game-field div.O,
+.game-field div.S,
+.game-field div.Z,
+.game-field div.T,
+.game-field div.sad-face {
+    box-shadow: inset 2px 2px 2px rgb(255, 255, 255, 0.35),
+        inset -2px -2px 2px rgb(1, 8, 89, 0.35) !important;
+}
+
+.game-field div.ghost {
+    box-shadow: inset 2px 2px 2px rgb(255, 255, 255, 0.2),
+        inset -2px -2px 2px rgb(1, 8, 89, 0.2);
+}
+
+.counters {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.lines-wrapper {
+    display: flex;
+    gap: 5px;
+    text-align: left;
+}
+
+.lines-instruction {
+    justify-content: space-between;
+}
+
+.blocks-counter-wrapper {
+    display: flex;
+    gap: 5px;
+    text-align: left;
+}
+
+.control-wrapper {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-control {
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    border: 2px solid var(--dim-aquamarine);
+    border-radius: 6px;
+    background-color: var(--dim-blue);
+    color: var(--dim-aquamarine);
+    padding: 4px 20px;
+
+    width: 100%;
+}
+
+.btn-control:hover {
+    border: 2px solid var(--dim-blue);
+}
+
+.btn-control:active {
+    background-color: var(--deep-blue);
+    color: var(--dim-aquamarine);
+    border: 2px solid var(--deep-blue);
+}
+
+.btn-restart {
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.btn-start-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-start.hide {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.btn-start {
+    font-size: 30px;
+    padding-top: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    height: auto;
+}
+
+h4.number {
+    letter-spacing: .04em;
+}
+
+.game-instruction {
+    display: none;
+}
+
+.game-instruction.show {
+    display: block;
+
+    position: absolute;
+    background-color: var(--dim-aquamarine);
+    padding: 16px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
+
+.game-instruction h3 {
+    margin-bottom: 10px;
+    line-height: 18px;
+}
+
+.game-instruction .lines-wrapper {
+    margin-bottom: 5px;
+}
+
+.btn-instruction {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    border: 2px solid var(--dim-blue);
+    border-radius: 20px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.btn-instruction.hide {
+    display: none;
+}
+
+h4.symbol {
+    font-size: 20px;
+    line-height: 16px;
+}
